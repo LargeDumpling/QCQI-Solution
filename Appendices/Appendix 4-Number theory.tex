@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{geometry}
+\geometry{a4paper,scale=0.85}
+\title{Appendix 4: Number theory}
+\author{Hongyuan Sun\thanks{E-mail:LargeDumpling@foxmail.com}}
+\begin{document}
+\maketitle
+\section*{A4.1 Fundamentals}
+
+\section*{A4.2 Modular arithmetic and Euclid's algorithm}
+
+\section*{A4.3 Reduction of factoriing to order-finding}
+
+\section*{A4.4 Continued fraction}
+	\subsection*{Exercise A4.18}
+	\begin{align*}
+		x &= \frac{19}{17} = [1,8,2] \tag{AE4.18-1} \\
+		x &= \frac{77}{65} = [1,5,2,2,2] \tag{AE4.18-2}
+	\end{align*}
+	
+	\subsection*{Exercise A4.19}
+	\begin{proof}
+		\[ \because \begin{cases}
+			[a_0] = a_0 = \frac{p_0}{q_0} \\
+			[a_0,a_1] = a_0 + \frac{1}{a_1} = \frac{p_1}{q_1} \tag{AE4.19-1}
+		\end{cases} \]
+		\[ \therefore \begin{cases}
+			p_0 = a_0 \\
+			q_0 = 1
+		\end{cases} \begin{cases}
+			p_1 = a_0a_1 + 1 \\
+			q_1 = a_1 \tag{AE4.19-2}
+		\end{cases} \]
+		\[ \therefore q_1p_0 - p_1q_0 = a_0a_1 - (a_0a_1+1) = -1 \]
+
+		If $q_np_{n-1} - p_nq_{n-1} = (-1)^n$ for $n=k$, then with equations (AE4.42),(AE4.43), we can get
+		\begin{align*}
+			q_{k+1}p_k - p_{k+1}q_k
+			&= (a_{k+1}q_k + q_{k-1})p_k - (a_{k+1}p_k + p_{k-1})q_k \tag{AE4.19-3} \\
+			&= a_{k+1}(q_kp_k - p_kq_k)+q_{k-1}p_k - p_{k-1}q_k \tag{AE4.19-4} \\
+			&= - (-1)^k = (-1)^{k+1} \tag{AE4.19-5}
+		\end{align*}
+
+		So $q_np_{n-1} - p_nq_{n-1} = (-1)^n$ for $n=k+1$, using inductive reasoning we can prove that this statement is true for $n \geqslant 1$.
+	\end{proof}
+
+	\subsection*{Problem 4.1(Prime number estimate)}
+		\subsubsection*{(1)}
+		\begin{proof}
+			\begin{align*}
+				\log \binom{2n}{n}
+				&= \log \frac{\prod_{i=0}^{n-1}(2n - i)}{\prod_{i=0}^{n-1}(n - i)} \tag{AP4.1-1} \\
+				&= \log \prod_{i=0}^{n-1} \frac{2n - i}{n - i} \tag{AP4.1-2} \\
+				&\geqslant \log 2^n \tag{AP4.1-3} \\
+				&= n \qedhere
+			\end{align*}
+		\end{proof}
+
+		\subsubsection*{(2)}
+		
+		\subsubsection*{(3)}
+		\begin{proof}
+			\begin{align*}
+				\because n
+				&\leqslant \log \binom{2n}{n} \tag{AP4.1-4} \\
+				&\leqslant \sum_{p \leqslant 2n} \left\lfloor \frac{\log(2n)}{\log p} \right\rfloor \log p \tag{AP4.1-5} \\
+				&\leqslant \sum_{p \leqslant 2n} \log(2n) \tag{AP4.1-6} \\
+				&= \pi (2n) \log (2n) \tag{AP4.1-7}
+			\end{align*}
+			\[ \therefore \pi(2n) \geqslant \frac{n}{\log(2n)} \qedhere \]
+		\end{proof}
+
+\end{document}
+
