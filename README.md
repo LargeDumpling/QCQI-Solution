@@ -7,4 +7,4 @@ Current progress:
 * [ ] Part II-Quantum computation
 * [ ] Part III-Quantum information
 * [ ] Appendices
-    * [ ] Appendix 4: Number theory
+    * [x] Appendix 4: Number theory (Unfinished)
