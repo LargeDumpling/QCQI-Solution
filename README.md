@@ -1,5 +1,7 @@
-# QCQI-Solution
-Personal solutions for the famous textbook written by Nielsen, M.A. and Chuang, I.L., *Quantum Computation and Quantum Information: $10^{th}$ anniversary edition*.
+# Solution for *Quantum Computation and Quantum Information*
+Personal solutions for the famous textbook written by Nielsen, M.A. and Chuang, I.L., *Quantum Computation and Quantum Information: 10th anniversary edition*.
+
+For any mistakes found or discussion, please contact me LargeDumpling@foxmail.com.
 
 Current progress:
 
